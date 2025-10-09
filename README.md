@@ -1,1 +1,31 @@
 # shaojh.github.io
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+
+    <h1>Andrew Shao's Personal Portfolio</h1>
+
+    <h2>EECS 440 Project 1</h2>
+    
+    <p>We used Unreal Engine 5 to create our Virtual Reality environment, while utilizing blueprints to allow physical object properties to be easily duplicable. For team and project management, we used Jira.</p>
+    
+    <iframe 
+        width="560" 
+        height="315" 
+        src="https://www.youtube.com/watch?v=MrD278naiqE" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen>
+    </iframe>
+
+    <h2>Chinese/Japanese Example Sentence Generator</h2>
+</head>
+<body>
+    
+</body>
+</html>

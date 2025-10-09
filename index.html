@@ -1,40 +1,78 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Andrew Shao | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <title>Personal Portfolio</title>
+  <!-- Navigation -->
+  <nav id="navbar">
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#resume">Resume</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-    <h1>Andrew Shao's Personal Portfolio</h1>
+  <!-- Hero / About -->
+  <section id="about" class="section">
+    <h1>Hi, I'm Andrew Shao!</h1>
+    <p>I’m a Computer Science student at the University of Michigan with a passion for creating technology that’s both innovative and socially impactful. My experience spans full-stack web development, low level programming, and machine learning, and I strive to build solutions that are elegant, efficient, and meaningful to users.</p>
+    <img src="assets/profile.jpg" alt="Andrew Shao" class="profile-pic" />
+  </section>
 
-    <h2>EECS 440 Project 1</h2>
-    
-    <p>We used Unreal Engine 5 to create our Virtual Reality environment, while utilizing blueprints to allow physical object properties to be easily duplicable. For team and project management, we used Jira.</p>
-    
-    <iframe 
-        width="560" 
-        height="315" 
-        src="https://www.youtube.com/watch?v=MrD278naiqE" 
-        title="YouTube video player" 
-        frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-        allowfullscreen>
-    </iframe>
+  <!-- Projects -->
+  <section id="projects" class="section">
+    <h2>Projects</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <img src="assets/project1.png" alt="Project 1" />
+        <h3>S-Watch</h3>
+        <p>AI-powered movie streaming platform built with React, Go (Gin-Gonic), and MongoDB, featuring personalized recommendations using LangChainGo and OpenAI.</p>
+      </div>
+      <div class="project-card">
+        <img src="assets/project2.png" alt="Project 2" />
+        <h3>Black Duck Jira Ticket Script</h3>
+        <p>Python automation script integrating Black Duck API with Jira to automatically generate and assign security issue tickets based on vulnerability scans.</p>
+      </div>
+      <div class="project-card">
+        <img src="assets/project3.png" alt="Project 3" />
+        <h3>FactoryTalk Echo Sample Projects</h3>
+        <p>Developed interactive web dashboards and data visualization modules for Rockwell Automation’s FactoryTalk Echo IDE, enhancing usability and system performance testing workflows.</p>
+      </div>
+      <div class="project-card">
+        <img src="assets/project4.png" alt="Project 4" />
+        <h3>Instagram Clone</h3>
+        <p>Full-stack social media web application supporting user posts, comments, and likes, built with Flask, SQLite, and React for dynamic, responsive interaction.</p>
+      </div>
+      <div class="project-card">
+        <img src="assets/project5.png" alt="Project 5" />
+        <h3>Search Engine</h3>
+        <p>Distributed MapReduce-based search engine with a Python backend, implementing an inverted index, tf-idf ranking, and parallelized query handling for high-speed results.</p>
+      </div>
 
-    <h2>EECS 440 Project 2</h2>
-    
-    <p>Project 2 involved utilizing Unity and C# scripting to make an AR Pokemon Go clone, also using Jira for project management.</p>
-    
-    <iframe 
-        width="560" 
-        height="315" 
-        src="https://www.youtube.com/watch?v=tyfvxN5XgT0" 
-        title="YouTube video player" 
-        frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-        allowfullscreen>
-    </iframe>
+    </div>
+  </section>
+
+  <!-- Resume -->
+  <section id="resume" class="section">
+    <h2>Resume</h2>
+    <p><a href="assets/resume.pdf" target="_blank">View my resume (PDF)</a></p>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:shaojh@umich.edu">andrewshao@umich.edu</a></p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/andrewshao" target="_blank">linkedin.com/in/andrewshao</a></p>
+    <p>GitHub: <a href="https://github.com/andrewshao" target="_blank">github.com/andrewshao</a></p>
+  </section>
+
+  <script src="script.js"></script>
 </body>
 </html>
