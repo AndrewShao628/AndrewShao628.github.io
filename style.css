@@ -77,7 +77,21 @@ nav ul li a:hover {
 }
 
 /* Contact */
-#contact a {
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.icon-link {
+  color: #333;
+  font-size: 2rem;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.icon-link:hover {
   color: #0077cc;
-  text-decoration: none;
+  transform: scale(1.15);
 }
