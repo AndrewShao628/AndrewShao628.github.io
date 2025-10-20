@@ -20,39 +20,49 @@
     </ul>
   </nav>
 
-  <!-- Hero / About -->
+  <!-- About Section -->
   <section id="about" class="section">
-    <h1>Hi, I'm Andrew Shao!</h1>
-    <p>I’m a Computer Science student at the University of Michigan with a passion for creating technology that’s both innovative and socially impactful. My experience spans full-stack web development, low level programming, and machine learning, and I strive to build solutions that are elegant, efficient, and meaningful to users.</p>
-    <img src="assets/profile.jpg" alt="Andrew Shao" class="profile-pic" />
+    <div class="about-container">
+      <div class="about-text">
+        <h1>Hi, I'm Andrew Shao!</h1>
+        <p>
+          I’m a Computer Science student at the University of Michigan with a passion for creating technology that’s both innovative and socially impactful.
+          My experience spans full-stack web development, Android app design, and machine learning, and I strive to build solutions that are elegant, efficient, and meaningful to users.
+        </p>
+      </div>
+      <div class="about-image">
+        <img src="assets/profile.jpg" alt="Andrew Shao" class="profile-pic" />
+      </div>
+    </div>
   </section>
+
 
   <!-- Projects -->
   <section id="projects" class="section">
     <h2>Projects</h2>
     <div class="project-grid">
       <div class="project-card">
-        <img src="assets/project1.png" alt="Project 1" />
+        <!-- <img src="assets/project1.png" alt="Project 1" /> -->
         <h3>S-Watch</h3>
         <p>AI-powered movie streaming platform built with React, Go (Gin-Gonic), and MongoDB, featuring personalized recommendations using LangChainGo and OpenAI.</p>
       </div>
       <div class="project-card">
-        <img src="assets/project2.png" alt="Project 2" />
+        <!-- <img src="assets/project2.png" alt="Project 2" /> -->
         <h3>Black Duck Jira Ticket Script</h3>
         <p>Python automation script integrating Black Duck API with Jira to automatically generate and assign security issue tickets based on vulnerability scans.</p>
       </div>
       <div class="project-card">
-        <img src="assets/project3.png" alt="Project 3" />
+        <!-- <img src="assets/project3.png" alt="Project 3" /> -->
         <h3>FactoryTalk Echo Sample Projects</h3>
         <p>Developed interactive web dashboards and data visualization modules for Rockwell Automation’s FactoryTalk Echo IDE, enhancing usability and system performance testing workflows.</p>
       </div>
       <div class="project-card">
-        <img src="assets/project4.png" alt="Project 4" />
+        <!-- <img src="assets/project4.png" alt="Project 4" /> -->
         <h3>Instagram Clone</h3>
         <p>Full-stack social media web application supporting user posts, comments, and likes, built with Flask, SQLite, and React for dynamic, responsive interaction.</p>
       </div>
       <div class="project-card">
-        <img src="assets/project5.png" alt="Project 5" />
+        <!-- <img src="assets/project5.png" alt="Project 5" /> -->
         <h3>Search Engine</h3>
         <p>Distributed MapReduce-based search engine with a Python backend, implementing an inverted index, tf-idf ranking, and parallelized query handling for high-speed results.</p>
       </div>
@@ -63,8 +73,11 @@
   <!-- Resume -->
   <section id="resume" class="section">
     <h2>Resume</h2>
-    <p><a href="assets/resume.pdf" target="_blank">View my resume (PDF)</a></p>
+    <a href="assets/resume.pdf" target="_blank" class="resume-button">
+      View My Resume (PDF)
+    </a>
   </section>
+
 
   <!-- Contact -->
   <section id="contact" class="section">

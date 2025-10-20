@@ -49,6 +49,65 @@ nav ul li a:hover {
   background-color: #e8f0fe;
 }
 
+/* 
+#about {
+  background-image: url("assets/background.jpg");
+  background-size: cover;        
+  background-position: center;   
+  background-repeat: no-repeat;  
+  color: #fff;                   
+  padding: 100px 20px;
+  text-align: center;
+  position: relative;
+} 
+*/
+
+.about-container {
+  display: flex;
+  flex-direction: column; /* default: stacked for small screens */
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.about-text {
+  text-align: center;
+  max-width: 600px;
+}
+
+.about-image img {
+  width: 180px;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* When screen is wide enough — switch to side-by-side layout */
+@media (min-width: 900px) {
+  .about-container {
+    flex-direction: row; /* side by side */
+    text-align: left;
+  }
+
+  .about-text {
+    flex: 2;
+    text-align: left;
+  }
+
+  .about-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+
+  .about-image img {
+    width: 220px;
+  }
+}
+
+
 .profile-pic {
   width: 150px;
   border-radius: 50%;
@@ -75,6 +134,26 @@ nav ul li a:hover {
   width: 100%;
   border-radius: 8px;
 }
+
+/* Resume Button */
+.resume-button {
+  display: inline-block;
+  padding: 12px 28px;
+  background-color: #0077cc;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.resume-button:hover {
+  background-color: #005fa3;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+}
+
 
 /* Contact */
 .contact-icons {
