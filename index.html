@@ -1,17 +1,25 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Andrew Shao | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+  <!-- ambient background -->
+  <div class="bg-orb orb-1"></div>
+  <div class="bg-orb orb-2"></div>
+  <div class="bg-orb orb-3"></div>
+
   <!-- Navigation -->
   <nav id="navbar">
+    <div class="nav-logo">AS<span class="dot">.</span></div>
     <ul>
       <li><a href="#about">About</a></li>
       <li><a href="#projects">Projects</a></li>
@@ -24,78 +32,141 @@
   <section id="about" class="section">
     <div class="about-container">
       <div class="about-text">
-        <h1>Hi, I'm Andrew Shao!</h1>
-        <p>
-          I’m a Computer Science student at the University of Michigan with a passion for creating technology that’s both innovative and socially impactful.
-          My experience spans full-stack web development, Android app design, and machine learning, and I strive to build solutions that are elegant, efficient, and meaningful to users.
+        <p class="eyebrow">Computer Science · University of Michigan</p>
+        <h1>Hi, I'm<br><em>Andrew Shao</em></h1>
+        <p class="about-bio">
+          I’m a Computer Science student at the University of Michigan with a passion for creating technology that’s both innovative and socially impactful. My experience spans full-stack web development, distributed systems, and machine learning, and I strive to build solutions that are elegant, efficient, and meaningful to users.
         </p>
+        <div class="about-cta">
+          <a href="#projects" class="btn-primary">View Projects</a>
+          <a href="#contact" class="btn-ghost">Get in Touch</a>
+        </div>
       </div>
       <div class="about-image">
-        <img src="assets/profile.jpg" alt="Andrew Shao" class="profile-pic" />
+        <div class="image-frame">
+          <img src="assets/profile.jpg" alt="Andrew Shao" />
+          <div class="image-frame-border"></div>
+        </div>
       </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
     </div>
   </section>
 
-
   <!-- Projects -->
   <section id="projects" class="section">
-    <h2>Projects</h2>
+    <div class="section-header">
+      <span class="section-label">02 / Work</span>
+      <h2>Selected Projects</h2>
+    </div>
     <div class="project-grid">
-      <div class="project-card">
-        <!-- <img src="assets/project1.png" alt="Project 1" /> -->
+
+      <div class="project-card" style="--delay: 0ms">
+        <div class="card-tag">Full Stack · AI</div>
         <h3>S-Watch</h3>
         <p>AI-powered movie streaming platform built with React, Go (Gin-Gonic), and MongoDB, featuring personalized recommendations using LangChainGo and OpenAI.</p>
+        <div class="card-chips">
+          <span>Web Dev</span><span>Distributed</span><span>AI/ML</span><span>React</span><span>Go</span><span>MongoDB</span><span>OpenAI</span>
+        </div>
       </div>
-      <div class="project-card">
-        <!-- <img src="assets/project2.png" alt="Project 2" /> -->
+
+      <div class="project-card" style="--delay: 80ms">
+        <div class="card-tag">Automation · Security</div>
         <h3>Black Duck Jira Ticket Script</h3>
         <p>Python automation script integrating Black Duck API with Jira to automatically generate and assign security issue tickets based on vulnerability scans.</p>
+        <div class="card-chips">
+          <span>Python</span><span>REST API</span><span>Black Duck</span><span>CI/CD</span>
+        </div>
       </div>
-      <div class="project-card">
-        <!-- <img src="assets/project3.png" alt="Project 3" /> -->
+
+      <div class="project-card" style="--delay: 160ms">
+        <div class="card-tag">Dashboard · Industry</div>
         <h3>FactoryTalk Echo Sample Projects</h3>
-        <p>Developed interactive web dashboards and data visualization modules for Rockwell Automation’s FactoryTalk Echo IDE, enhancing usability and system performance testing workflows.</p>
+        <p>Interactive web dashboards and data visualization modules for Rockwell Automation's FactoryTalk Echo IDE, enhancing usability and performance testing workflows.</p>
+        <div class="card-chips">
+          <span>Web Dev</span><span>Data Viz</span><span>C#</span><span>C++</span>
+        </div>
       </div>
-      <div class="project-card">
-        <!-- <img src="assets/project4.png" alt="Project 4" /> -->
+
+      <div class="project-card" style="--delay: 240ms">
+        <div class="card-tag">Full Stack · Social</div>
         <h3>Instagram Clone</h3>
         <p>Full-stack social media web application supporting user posts, comments, and likes, built with Flask, SQLite, and React for dynamic, responsive interaction.</p>
+        <div class="card-chips">
+          <span>Web Dev</span><span>REST API</span><span>Flask</span><span>React</span><span>SQLite</span>
+        </div>
       </div>
-      <div class="project-card">
-        <!-- <img src="assets/project5.png" alt="Project 5" /> -->
+
+      <div class="project-card featured" style="--delay: 320ms">
+        <div class="card-tag">Systems · ML</div>
         <h3>Search Engine</h3>
         <p>Distributed MapReduce-based search engine with a Python backend, implementing an inverted index, tf-idf ranking, and parallelized query handling for high-speed results.</p>
+        <div class="card-chips">
+          <span>Distributed</span><span>Search Engine</span><span>Python</span><span>MapReduce</span><span>tf-idf</span>
+        </div>
       </div>
 
     </div>
   </section>
 
   <!-- Resume -->
-  <section id="resume" class="section">
-    <h2>Resume</h2>
-    <a href="assets/resume.pdf" target="_blank" class="resume-button">
-      View My Resume (PDF)
-    </a>
-  </section>
-
-
-  <!-- Contact -->
-  <section id="contact" class="section">
-    <h2>Contact</h2>
-    <div class="contact-icons">
-      <a href="mailto:shaojh@umich.edu" class="icon-link" title="Email">
-        <i class="fas fa-envelope"></i>
-      </a>
-      <a href="https://linkedin.com/in/AndrewShao628" target="_blank" class="icon-link" title="LinkedIn">
-        <i class="fab fa-linkedin"></i>
-      </a>
-      <a href="https://github.com/AndrewShao628" target="_blank" class="icon-link" title="GitHub">
-        <i class="fab fa-github"></i>
+  <section id="resume" class="section resume-section">
+    <div class="resume-inner">
+      <span class="section-label">03 / Resume</span>
+      <h2>See my resume for more!</h2>
+      <p>Download my resume for a comprehensive look at my experience, education, and skills.</p>
+      <a href="assets/resume.pdf" target="_blank" class="resume-button">
+        <i class="fas fa-file-arrow-down"></i>
+        View Resume (PDF)
       </a>
     </div>
   </section>
 
+  <!-- Contact -->
+  <section id="contact" class="section">
+    <div class="section-header">
+      <span class="section-label">04 / Contact</span>
+      <h2>Let's Connect!</h2>
+      <!-- <p class="contact-sub">Open to internships, collaborations, and interesting problems.</p> -->
+    </div>
+    <div class="contact-icons">
+      <a href="mailto:shaojh@umich.edu" class="icon-link" title="Email">
+        <i class="fas fa-envelope"></i>
+        <span>shaojh@umich.edu</span>
+      </a>
+      <a href="https://linkedin.com/in/AndrewShao628" target="_blank" class="icon-link" title="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+        <span>LinkedIn</span>
+      </a>
+      <a href="https://github.com/AndrewShao628" target="_blank" class="icon-link" title="GitHub">
+        <i class="fab fa-github"></i>
+        <span>GitHub</span>
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <p>Designed & built by Andrew Shao · <span id="year"></span></p>
+  </footer>
 
   <script src="script.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Intersection Observer for scroll animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(el => {
+        if (el.isIntersecting) el.target.classList.add('visible');
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.project-card, .section-header, .resume-inner, .contact-icons').forEach(el => {
+      observer.observe(el);
+    });
+  </script>
 </body>
 </html>
