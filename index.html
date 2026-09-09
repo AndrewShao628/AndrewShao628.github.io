@@ -8,20 +8,17 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-  <!-- ambient background -->
-  <div class="bg-orb orb-1"></div>
-  <div class="bg-orb orb-2"></div>
-  <div class="bg-orb orb-3"></div>
 
   <!-- Navigation -->
   <nav id="navbar">
     <div class="nav-logo">AS<span class="dot">.</span></div>
     <ul>
       <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#resume">Resume</a></li>
       <li><a href="#contact">Contact</a></li>
@@ -35,7 +32,7 @@
         <p class="eyebrow">Computer Science · University of Michigan</p>
         <h1><em>Andrew Shao</em></h1>
         <p class="about-bio">
-          I’m a Computer Science student at the University of Michigan with a passion for creating technology that’s both innovative and socially impactful. My experience spans distributed systems, machine learning, and full-stack web development, and I strive to build solutions that are elegant, efficient, and meaningful to users.
+          Former Software Intern at Rockwell Automation, Computer Science student at the University of Michigan. My experience spans distributed systems, machine learning, and full-stack web development.
         </p>
         <div class="about-cta">
           <a href="#projects" class="btn-primary">Projects</a>
@@ -50,10 +47,54 @@
       </div>
     </div>
 
-    <!-- Scroll indicator -->
+    <!-- Scroll indicator
     <div class="scroll-hint">
       <span>Scroll</span>
       <div class="scroll-line"></div>
+    </div> -->
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="section">
+    <div class="section-header">
+      <h2>My Skills</h2>
+    </div>
+
+    <!-- icon wall — click an icon to see the detail below -->
+        <div class="skills-icon-grid">
+      <div class="skill-icon" data-skill="cpp" title="C++"><img src="assets/icons/cpp.svg" alt="C++" class="skill-icon-img"></div>
+      <div class="skill-icon" data-skill="c" title="C"><img src="assets/icons/c.svg" alt="C" class="skill-icon-img"></div>
+      <div class="skill-icon active" data-skill="go" title="Go"><img src="assets/icons/go.svg" alt="Go" class="skill-icon-img"></div>
+      <div class="skill-icon" data-skill="python" title="Python"><img src="assets/icons/python.svg" alt="Python" class="skill-icon-img"></div>
+      <div class="skill-icon" data-skill="csharp" title="C#"><img src="assets/icons/csharp.svg" alt="C#" class="skill-icon-img"></div>
+      <div class="skill-icon" data-skill="java" title="Java"><img src="assets/icons/java.svg" alt="Java" class="skill-icon-img"></div>
+      <div class="skill-icon" data-skill="javascript" title="JavaScript"><img src="assets/icons/javascript.svg" alt="JavaScript" class="skill-icon-img"></div>
+      <div class="skill-icon" data-skill="react" title="React"><img src="assets/icons/react.svg" alt="React" class="skill-icon-img"></div>
+      <div class="skill-icon" data-skill="bash" title="Bash"><img src="assets/icons/bash.svg" alt="Bash" class="skill-icon-img"></div>
+      <div class="skill-icon" data-skill="html" title="HTML5"><img src="assets/icons/html.svg" alt="HTML5" class="skill-icon-img"></div>
+      <div class="skill-icon" data-skill="css" title="CSS3"><img src="assets/icons/css.svg" alt="CSS3" class="skill-icon-img"></div>
+      <div class="skill-icon" data-skill="mongodb" title="MongoDB"><img src="assets/icons/mongodb.svg" alt="MongoDB" class="skill-icon-img"></div>
+      <div class="skill-icon" data-skill="docker" title="Docker"><img src="assets/icons/docker.svg" alt="Docker" class="skill-icon-img"></div>
+      <div class="skill-icon" data-skill="kubernetes" title="Kubernetes"><img src="assets/icons/kubernetes.svg" alt="Kubernetes" class="skill-icon-img"></div>
+      <div class="skill-icon" data-skill="kafka" title="Apache Kafka"><img src="assets/icons/kafka.svg" alt="Apache Kafka" class="skill-icon-img"></div>
+      <div class="skill-icon" data-skill="fastapi" title="FastAPI"><img src="assets/icons/fastapi.svg" alt="FastAPI" class="skill-icon-img"></div>
+      <div class="skill-icon" data-skill="gcp" title="Google Cloud"><img src="assets/icons/gcp.svg" alt="Google Cloud" class="skill-icon-img"></div>
+      <div class="skill-icon" data-skill="aws" title="AWS"><img src="assets/icons/aws.svg" alt="AWS" class="skill-icon-img"></div>
+      <div class="skill-icon" data-skill="android" title="Android"><img src="assets/icons/android.svg" alt="Android" class="skill-icon-img"></div>
+      <div class="skill-icon" data-skill="opencv" title="OpenCV"><img src="assets/icons/opencv.svg" alt="OpenCV" class="skill-icon-img"></div>
+      <div class="skill-icon" data-skill="redis" title="Redis"><img src="assets/icons/redis.svg" alt="Redis" class="skill-icon-img"></div>
+      <div class="skill-icon" data-skill="git" title="Git"><img src="assets/icons/git.svg" alt="Git" class="skill-icon-img"></div>
+      <div class="skill-icon" data-skill="github" title="GitHub"><img src="assets/icons/github.svg" alt="GitHub" class="skill-icon-img"></div>
+      <div class="skill-icon" data-skill="linux" title="Linux"><img src="assets/icons/linux.svg" alt="Linux" class="skill-icon-img"></div>
+    </div>
+
+    <!-- detail panel — swaps content based on the selected icon above -->
+    <div class="skill-detail">
+      <h4 id="skill-detail-title">Go</h4>
+      <ul id="skill-detail-list">
+        <li>Built a fault-tolerant distributed job scheduler in Go, using gRPC for inter-node communication, Raft-backed consensus for scheduler state, and bin-packing for CPU/memory-aware job allocation.</li>
+        <li>Used Go (Gin-Gonic) as the backend framework for S-Watch, an AI-powered movie streaming platform.</li>
+      </ul>
     </div>
   </section>
 
@@ -65,7 +106,7 @@
     <div class="project-grid">
 
       <div class="project-card" style="--delay: 0ms">
-        <div class="card-tag">Distributed Systems · Infra</div>
+        <!-- <div class="card-tag">Distributed Systems · Infra</div> -->
         <h3>Distributed Job Scheduler</h3>
         <p>Fault-tolerant distributed job scheduler in Go using gRPC for inter-node communication and bin-packing to allocate jobs across worker nodes by CPU/memory, with priority-based preemption, heartbeat health checks, and Raft-backed consensus for scheduler state.</p>
         <div class="card-chips">
@@ -74,7 +115,7 @@
       </div>
 
       <div class="project-card" style="--delay: 80ms">
-        <div class="card-tag">Dashboard · Industry</div>
+        <!-- <div class="card-tag">Dashboard · Industry</div> -->
         <h3>Asynchronous Telemetry Data Pipeline</h3>
         <p>an AI agent using LangChain and FastAPI to analyze 2M+ CI/CD logs and automatically detect failures, reducing
 manual review time by 85% and streamlining debugging via automated GitLab issue creation with suggested code fixes.</p>
@@ -84,7 +125,7 @@ manual review time by 85% and streamlining debugging via automated GitLab issue 
       </div>
 
       <div class="project-card" style="--delay: 160ms">
-        <div class="card-tag">Dashboard · Industry</div>
+        <!-- <div class="card-tag">Dashboard · Industry</div> -->
         <h3>FactoryTalk Echo Sample Projects</h3>
         <p>Interactive web dashboards and data visualization modules for Rockwell Automation's FactoryTalk Echo IDE, enhancing usability and performance testing workflows.</p>
         <div class="card-chips">
@@ -103,7 +144,7 @@ with Google Cloud Storage (GCS) for low-latency video playback to client applica
       </div> -->
 
       <div class="project-card" style="--delay: 240ms">
-        <div class="card-tag">Systems · ML</div>
+        <!-- <div class="card-tag">Systems · ML</div> -->
         <h3>MapReduce Framework & Search Engine</h3>
         <p>Distributed MapReduce-based search engine with a Python backend, implementing an inverted index, tf-idf ranking, and parallelized query handling for high-speed results.</p>
         <div class="card-chips">
@@ -120,7 +161,7 @@ with Google Cloud Storage (GCS) for low-latency video playback to client applica
         </div>
       </div> -->
       <div class="project-card" style="--delay: 300ms">
-        <div class="card-tag">Full Stack · AI</div>
+        <!-- <div class="card-tag">Full Stack · AI</div> -->
         <h3>S-Watch</h3>
         <p>AI-powered movie streaming platform built with React, Go (Gin-Gonic), and MongoDB, featuring personalized recommendations using LangChainGo and OpenAI.</p>
         <div class="card-chips">
@@ -130,7 +171,7 @@ with Google Cloud Storage (GCS) for low-latency video playback to client applica
 
       <!-- <div class="project-card featured" style="--delay: 360ms"> -->
       <div class="project-card" style="--delay: 360ms">
-        <div class="card-tag">Automation · Security</div>
+        <!-- <div class="card-tag">Automation · Security</div> -->
         <h3>Black Duck Jira Ticket Script</h3>
         <p>Python automation script integrating Black Duck API with Jira to automatically generate and assign security issue tickets based on vulnerability scans.</p>
         <div class="card-chips">
@@ -191,7 +232,7 @@ with Google Cloud Storage (GCS) for low-latency video playback to client applica
       });
     }, { threshold: 0.12 });
 
-    document.querySelectorAll('.project-card, .section-header, .resume-inner, .contact-icons').forEach(el => {
+    document.querySelectorAll('.project-card, .section-header, .resume-inner, .contact-icons, .skills-icon-grid, .skill-detail').forEach(el => {
       observer.observe(el);
     });
   </script>

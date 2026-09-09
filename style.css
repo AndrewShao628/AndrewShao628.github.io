@@ -14,6 +14,7 @@
   --accent:       hsl(197, 90%, 55%);
   --accent-dim:   hsl(197, 60%, 40%);
   --accent-glow:  hsl(197, 90%, 55%, 0.15);
+  --grey: hsl(220, 10%, 45%);
 
   --font-display: 'DM Serif Display', Georgia, serif;
   --font-body:    'Outfit', sans-serif;
@@ -35,42 +36,37 @@ body {
   overflow-x: hidden;
 }
 
-/* ── Ambient background orbs ───────────────────── */
-.bg-orb {
-  position: fixed;
-  border-radius: 50%;
-  filter: blur(80px);
-  pointer-events: none;
-  z-index: 0;
-  animation: drift 14s ease-in-out infinite alternate;
+
+
+/* ── Custom Scrollbar ──────────────────────────── */
+
+/* Firefox */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--grey) var(--bg);
 }
 
-.orb-1 {
-  width: 500px; height: 500px;
-  background: radial-gradient(circle, hsl(197, 80%, 45%, 0.12), transparent 70%);
-  top: -120px; left: -100px;
-  animation-duration: 16s;
+/* WebKit (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+  width: 12px;
 }
 
-.orb-2 {
-  width: 400px; height: 400px;
-  background: radial-gradient(circle, hsl(270, 70%, 55%, 0.09), transparent 70%);
-  bottom: 10%; right: -80px;
-  animation-duration: 20s;
-  animation-delay: -6s;
+::-webkit-scrollbar-track {
+  background: var(--bg);
 }
 
-.orb-3 {
-  width: 300px; height: 300px;
-  background: radial-gradient(circle, hsl(197, 90%, 55%, 0.07), transparent 70%);
-  top: 50%; left: 40%;
-  animation-duration: 24s;
-  animation-delay: -10s;
+::-webkit-scrollbar-thumb {
+  background: var(--grey);
+  border-radius: 100px;
+  border: 3px solid var(--bg); /* creates padding effect around thumb */
 }
 
-@keyframes drift {
-  from { transform: translate(0, 0) scale(1); }
-  to   { transform: translate(30px, 40px) scale(1.08); }
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+::-webkit-scrollbar-corner {
+  background: var(--bg);
 }
 
 /* ── Navbar ────────────────────────────────────── */
@@ -330,6 +326,113 @@ h1 em {
 @keyframes pulse-line {
   0%, 100% { opacity: 0.4; }
   50%       { opacity: 1; }
+}
+
+/* ── Skills ────────────────────────────────────── */
+.skills-icon-grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 1.25rem;
+  margin-bottom: 3.5rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.skills-icon-grid.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.skill-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background var(--transition), border-color var(--transition), transform var(--transition), box-shadow var(--transition);
+}
+
+.skill-icon-img {
+  width: 55%;
+  height: 55%;
+  object-fit: contain;
+  transition: filter var(--transition), opacity var(--transition);
+}
+
+.skill-icon:hover {
+  background: var(--bg-card-hover);
+  border-color: hsl(197, 90%, 55%, 0.4);
+  transform: translateY(-4px);
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+.skill-icon.active {
+  background: var(--bg-card-hover);
+  border-color: var(--accent);
+  filter: grayscale(0%);
+  opacity: 1;
+  box-shadow: 0 0 20px hsl(197, 90%, 55%, 0.25);
+}
+
+.skill-detail {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem 3rem;
+  max-width: 720px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease 0.1s, transform 0.6s ease 0.1s;
+}
+
+.skill-detail.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.skill-detail h4 {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--accent);
+  margin-bottom: 1.25rem;
+}
+
+.skill-detail ul {
+  list-style: none;
+}
+
+.skill-detail li {
+  position: relative;
+  padding-left: 1.3rem;
+  font-size: 0.95rem;
+  color: var(--text-light);
+  line-height: 1.75;
+  margin-bottom: 0.75rem;
+}
+
+.skill-detail li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.7em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.skill-detail li:last-child { margin-bottom: 0; }
+
+@media (max-width: 680px) {
+  .skill-icon { width: 52px; height: 52px; font-size: 1.5rem; }
+  .skill-detail { padding: 2rem 1.75rem; }
 }
 
 /* ── Projects ──────────────────────────────────── */
