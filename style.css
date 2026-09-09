@@ -117,7 +117,7 @@ nav ul li a:hover { color: var(--accent); }
   position: relative;
   z-index: 1;
   padding: 120px 6vw;
-  max-width: 1200px;
+  max-width: 1600px;
   margin: 0 auto;
 }
 
@@ -197,12 +197,12 @@ h1 {
 }
 
 h1 em {
-  font-style: italic;
+  font-style: normal;
   /* color: var(--accent); */
 }
 
 .about-bio {
-  font-size: 1.05rem;
+  font-size: 1.3rem;
   color: var(--text-light);
   max-width: 520px;
   margin-bottom: 2.5rem;

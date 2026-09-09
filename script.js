@@ -118,7 +118,9 @@ const skillData = {
   gcp: {
     title: 'Google Cloud',
     bullets: [
-      'Integrated Google Cloud Storage into an Android backend video storage service at Sigwise for low-latency video playback.'
+      'Integrated Google Cloud Storage into an Android backend video storage service at Sigwise for low-latency video playback from the camera roll.',
+      'Deployed the S-Watch backend to GCP Cloud Run, pairing it with MongoDB Atlas for scalable data storage and a Vercel-hosted React frontend to ensure high availability and seamless media playback.'
+
     ]
   },
   aws: {
@@ -154,7 +156,7 @@ const skillData = {
   github: {
     title: 'GitHub',
     bullets: [
-      'I use GitHub to ost and maintain project repositories on GitHub, including the source for this portfolio site.'
+      'I use GitHub to host and maintain project repositories on GitHub, including the source for this portfolio site.'
     ]
   },
   linux: {
