@@ -16,7 +16,8 @@ const skillData = {
     title: 'C++',
     bullets: [
       'Debugged concurrency issues in C/C++ services inside the Logix Designer enterprise codebase during my internship at Rockwell Automation.',
-      'Built interactive dashboards and data visualization modules in C++ for Rockwell Automation\'s FactoryTalk Echo IDE.'
+      'When working on the FactoryTalk Echo SDK sample projects, I used C++ to write unit and integration tests integrated into a Jenkins CI/CD pipeline to improve release confidence.',
+      'As a student at the University of Michigan, the majority of my projects were done in C++. Used in classes such as Operating Systems, Data Structures and Algorithms, and Applied Parallel Programming with GPUs.'
     ]
   },
   c: {
@@ -36,14 +37,15 @@ const skillData = {
     title: 'Python',
     bullets: [
       'In my internship with Rockwell Automation, I built an AI agent with LangChain and FastAPI that analyzes 2M+ CI/CD logs to auto-detect failures, reducing manual review time by 85%.',
-      'Implemented a MapReduce-based search engine backend with an inverted index and tf-idf ranking for parallelized queries.',
-      'Wrote a Python automation script integrating the Black Duck API with Jira to auto-generate security tickets from vulnerability scans.'
+      'Also at Rockwell, I wrote a Python automation script integrating the Black Duck API with Jira to auto-generate security tickets from vulnerability scans, which was integrated into the Jenkins CI/CD pipeline.',
+      'Implemented a MapReduce-based search engine backend with an inverted index and tf-idf ranking for parallelized queries.'
     ]
   },
   csharp: {
     title: 'C#',
     bullets: [
-      'Built interactive web dashboards and data visualization modules in C# for Rockwell Automation\'s FactoryTalk Echo IDE, improving usability and performance testing workflows.'
+      'During my internship at Rockwell Automation, I used C# and .NET to develop 8 sample projects for the FactoryTalk Echo SDK enabling controller automation and co-simulation.',
+      "Also at Rockwell, I used C# to write unit and integration tests for these sample projects that were integrated into a Jenkins CI/CD pipeline to improve release confidence."
     ]
   },
   java: {
@@ -56,6 +58,7 @@ const skillData = {
   javascript: {
     title: 'JavaScript',
     bullets: [
+      'As a student computer consultant for the University of Michigan, I built a Chrome browser extension in Javascript that restructured helpdesk ticket data into a condensed dashboard and automated repetitive workflow actions using custom macros, greatly reducing ticket triage time for 100+ support agents.',
       'Built the scroll animations, navbar behavior, and interactive elements on this personal portfolio site.',
       'Used JavaScript across full-stack projects to wire up frontend interactivity alongside React.'
     ]
@@ -88,7 +91,7 @@ const skillData = {
   mongodb: {
     title: 'MongoDB',
     bullets: [
-      'Used MongoDB as the database layer for S-Watch, an AI-powered movie streaming platform built with React and Go.'
+      'For my personal project, I used MongoDB as the database layer for S-Watch, an AI-powered movie streaming platform built with React and Go.'
     ]
   },
   docker: {
@@ -120,7 +123,6 @@ const skillData = {
     bullets: [
       'Integrated Google Cloud Storage into an Android backend video storage service at Sigwise for low-latency video playback from the camera roll.',
       'Deployed the S-Watch backend to GCP Cloud Run, pairing it with MongoDB Atlas for scalable data storage and a Vercel-hosted React frontend to ensure high availability and seamless media playback.'
-
     ]
   },
   aws: {
