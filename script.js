@@ -26,6 +26,13 @@ const skillData = {
       'Debugged low-level concurrency issues in C inside the Logix Designer enterprise codebase during my internship at Rockwell Automation.'
     ]
   },
+  java: {
+    title: 'Java',
+    bullets: [
+      'Built an Android motion-detection security camera app in Java as part of a Sigwise software internship, using OpenCV to trigger recordings based on intensity thresholds.',
+      'Integrated a JavaMail/SMTP-based notification pipeline into the app to automatically deliver snapshots and clips via email.'
+    ]
+  },
   go: {
     title: 'Go',
     bullets: [
@@ -46,13 +53,6 @@ const skillData = {
     bullets: [
       'During my internship at Rockwell Automation, I used C# and .NET to develop 8 sample projects for the FactoryTalk Echo SDK enabling controller automation and co-simulation.',
       "Also at Rockwell, I used C# to write unit and integration tests for these sample projects that were integrated into a Jenkins CI/CD pipeline to improve release confidence."
-    ]
-  },
-  java: {
-    title: 'Java',
-    bullets: [
-      'Built an Android motion-detection security camera app in Java as part of a Sigwise software internship, using OpenCV to trigger recordings based on intensity thresholds.',
-      'Integrated a JavaMail/SMTP-based notification pipeline into the app to automatically deliver snapshots and clips via email.'
     ]
   },
   javascript: {
