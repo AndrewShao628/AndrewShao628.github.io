@@ -17,27 +17,33 @@ const skillData = {
     bullets: [
       'Debugged concurrency issues in C/C++ services inside the Logix Designer enterprise codebase during my internship at Rockwell Automation.',
       'When working on the FactoryTalk Echo SDK sample projects, I used C++ to write unit and integration tests integrated into a Jenkins CI/CD pipeline to improve release confidence.',
+      'Engineered a high-throughput, asynchronous gRPC and Protobuf telemetry pipeline in C++ during my internship at Sigwise, streaming real-time application service metrics and reducing monitoring collection latency from 200ms to 130ms.',
+      'Developed a document processing backend microservice in C++ with PostgreSQL during my internship at Hyland Software, using indexing to reduce document ingestion latency by 30% and enable sub-second search retrieval.',
       'As a student at the University of Michigan, the majority of my projects were done in C++. Used in classes such as Operating Systems, Data Structures and Algorithms, and Applied Parallel Programming with GPUs.'
     ]
   },
   c: {
     title: 'C',
     bullets: [
-      'Debugged low-level concurrency issues in C inside the Logix Designer enterprise codebase during my internship at Rockwell Automation.'
+      'Debugged low-level concurrency issues in C inside the Logix Designer enterprise codebase during my internship at Rockwell Automation.',
+      'Built a full LC-2K computer architecture toolchain in C for EECS 370, including an assembler, a linker, and a pipelined simulator with cache modeling and hazard detection/forwarding.',
+      'Designed and implemented a custom CPU in C as my EECS 370 final project, extending the LC-2K architecture with additional functionality.'
     ]
   },
   java: {
     title: 'Java',
     bullets: [
       'Built an Android motion-detection security camera app in Java as part of a Sigwise software internship, using OpenCV to trigger recordings based on intensity thresholds.',
-      'Integrated a JavaMail/SMTP-based notification pipeline into the app to automatically deliver snapshots and clips via email.'
+      'Integrated a JavaMail/SMTP-based notification pipeline into the app to automatically deliver snapshots and clips via email.',
+      'In my MapReduce Framework + Search Engine project, I built a Spring Boot REST API to expose the search engine\'s tf-idf and PageRank rankings to a ReactJS frontend, enabling users to query the inverted index and retrieve ranked search results.',
     ]
   },
   go: {
     title: 'Go',
     bullets: [
+      'Designed a resilient, horizontally scalable distributed key-value store in Go using Paxos consensus and a sharded architecture across 12 shards and 30+ nodes, ensuring linearizable consistency at 15,000 ops/sec with live shard migration.',
       'Built a fault-tolerant distributed job scheduler in Go, using gRPC for inter-node communication, Raft-backed consensus for scheduler state, and bin-packing for CPU/memory-aware job allocation.',
-      'Used Go (Gin-Gonic) as the backend framework for S-Watch, an AI-powered movie streaming platform.'
+      'Developed a full-stack movie streaming platform with a Go/Gin backend for S-Watch, sas well as erving a self-trained ALS matrix factorization recommendation engine per-request with a 0.72 hit-rate at 10.',
     ]
   },
   python: {
@@ -79,13 +85,17 @@ const skillData = {
   html: {
     title: 'HTML5',
     bullets: [
-      'Structured this personal portfolio site and multiple dashboard front-ends with semantic HTML.'
+      'In my project S-Watch, I structured the markup for the React frontend with semantic HTML to support a responsive movie streaming interface.',
+      'Structured this personal portfolio site and multiple dashboard front-ends with semantic HTML.',
+      'In my class project, I built a Jinja2-based HTML templating system for an Instagram clone in EECS 485, structuring semantic markup for a multi-page static site.'
     ]
   },
   css: {
     title: 'CSS3',
     bullets: [
-      'I used CSS to style this personal portfolio site, including custom animations, gradients, and responsive layouts.'
+      'In my project S-Watch, I styled S-Watch\'s React frontend with CSS to create a responsive UI for browsing and streaming movies.',
+      'I used CSS to style this personal portfolio site, including custom animations, gradients, and responsive layouts.',
+      'In my class project, I styled the Instagram clone UI for EECS 485 with CSS to match the original app\'s layout and responsive design.'
     ]
   },
   mongodb: {
@@ -152,13 +162,15 @@ const skillData = {
   git: {
     title: 'Git',
     bullets: [
-      'Used Git for version control across every project on this site, from solo work to class project collaboration to internship codebases.'
+      'At CoreLogic, I utilized Git for version control, employing branching strategies and pull request workflows to facilitate collaboration and ensure seamless code integration.',
+      'Used Git for version control across every project on this site, from solo work to class project collaboration to internship codebases.',
     ]
   },
   github: {
     title: 'GitHub',
     bullets: [
-      'I use GitHub to host and maintain project repositories on GitHub, including the source for this portfolio site.'
+      'I use GitHub to host and maintain project repositories on GitHub, including the source for this portfolio site.',
+      'In internship and class projects, I used GitHub to manage team collaboration, ensuring seamless integration of code with multiple contributors.'
     ]
   },
   linux: {
@@ -169,22 +181,28 @@ const skillData = {
   }
 };
 
+const DEFAULT_SKILL = 'cpp';
+
 const skillTitle = document.getElementById('skill-detail-title');
 const skillList = document.getElementById('skill-detail-list');
 
-document.querySelectorAll('.skill-icon').forEach(icon => {
-  icon.addEventListener('click', () => {
-    const key = icon.dataset.skill;
-    const data = skillData[key];
-    if (!data) return;
+function showSkill(key) {
+  const data = skillData[key];
+  if (!data) return;
 
-    document.querySelectorAll('.skill-icon').forEach(i => i.classList.remove('active'));
-    icon.classList.add('active');
-
-    skillTitle.textContent = data.title;
-    skillList.innerHTML = data.bullets.map(b => `<li>${b}</li>`).join('');
+  document.querySelectorAll('.skill-icon').forEach(i => {
+    i.classList.toggle('active', i.dataset.skill === key);
   });
+
+  skillTitle.textContent = data.title;
+  skillList.innerHTML = data.bullets.map(b => `<li>${b}</li>`).join('');
+}
+
+document.querySelectorAll('.skill-icon').forEach(icon => {
+  icon.addEventListener('click', () => showSkill(icon.dataset.skill));
 });
+
+showSkill(DEFAULT_SKILL);
 
 // Navbar subtly shrinks when scroll
 const navbar = document.getElementById('navbar');
